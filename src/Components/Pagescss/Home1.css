@@ -1,0 +1,99 @@
+/* Homepage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #00000000;
+  }
+  
+  .homepaget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .image-containerh {
+    max-width: min-content;
+   /* height: 60vh; */
+    perspective: 10000px;
+    position: relative;
+  }
+  
+  .slideshow-imageh {
+   max-width: max-content;
+    height: 100%;
+    object-fit: cover;
+    animation: slide 6s infinite ease-in-out;
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    25% {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+    75% {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: rotateY(-90deg);
+    }
+  }
+  
+  .titleh {
+    font-size: 2.5em;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: title-animation 2s ease-in-out infinite alternate;
+  }
+  .Abouth{
+    display: block;
+    max-width:min-content;
+    max-width: 500px;
+    margin: 10px 0 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #00000000;
+    background: linear-gradient(135deg, #6e8efb, #7cc750, #a777e3);
+    font-size: 16px;
+    color: #000;
+   
+  }
+  .Abouth p{
+    color: #ffffff;
+    text-align:left;
+  }
+  
+  @keyframes title-animation {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .titleh {
+      font-size: 2em;
+    }
+    .image-containerh {
+      height: 40vh;
+    }
+  }
+  
+  
+  

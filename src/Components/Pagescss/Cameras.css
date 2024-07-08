@@ -1,0 +1,88 @@
+/* camerasystem.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #00000000;
+}
+
+.headerc {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.headerc h1 {
+    margin: 0;
+}
+
+.headerc nav {
+    margin-top: 1rem;
+}
+
+.headerc button {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.headerc button:hover {
+    background: #fff;
+    color: #333;
+}
+
+.camera-system {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.camera-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.camera-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.camera-card:hover {
+    transform: rotateY(20deg);
+}
+
+.camera-image {
+    width: 100%;
+    height: auto;
+}
+
+.camera-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .camera-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .camera-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
